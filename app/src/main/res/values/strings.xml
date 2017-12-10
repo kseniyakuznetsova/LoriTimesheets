@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Lori Timesheets</string>
+
+    <!--Вход в систему-->
+    <string name="sign_in">Войти</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="error_empty_login">Введите логин</string>
+    <string name="error_empty_password">Введите пароль</string>
+    <string name="error_invalid_login_or_password">Неверный логин или пароль</string>
+    <string name="network_failed">Не удалось подключиться к серверу. Проверьте интернет-подключение или повторите попытку позже.</string>
+    <string name="login_to_system">Выполняется вход в систему…</string>
+    <!--Список time entry-->
+    <string name="sign_out">Выйти</string>
+</resources>
