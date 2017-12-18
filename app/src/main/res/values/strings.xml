@@ -10,6 +10,32 @@
     <string name="error_invalid_login_or_password">Неверный логин или пароль</string>
     <string name="network_failed">Не удалось подключиться к серверу. Проверьте интернет-подключение или повторите попытку позже.</string>
     <string name="login_to_system">Выполняется вход в систему…</string>
+
+    <!--Добавление записи -->
+    <string name="project_title">Проект</string>
+    <string name="task_title">Задача</string>
+    <string name="duration_title">Продолжительность</string>
+    <string name="description_title">Описание</string>
+    <string name="hour_title">ч</string>
+    <string name="minutes_title">мин</string>
+    <string name="save">Сохранить</string>
+    <string name="not_check">Не выбрано</string>
+
+    <string name="title_choose_project">Выберите проект</string>
+    <string name="title_choose_task">Выберите задачу</string>
+    <string name="dialog_btn_cancel">Отмена</string>
+
+
     <!--Список time entry-->
     <string name="sign_out">Выйти</string>
+
+    <!--Поиск-->
+    <string name="search_title">Поиск</string>
+    <string name="find">Найти</string>
+    <string name="error_date">Дата начала должна быть меньше даты окончания</string>
+    <string name="date_title">Дата</string>
+    <string name="error_not_found">Записи не найдены</string>
+    <string name="empty_field">Отсутствует</string>
+    <string name="information_not_available">Информация отсутствует</string>
+    <string name="find_information">Выполняется поиск…</string>
 </resources>

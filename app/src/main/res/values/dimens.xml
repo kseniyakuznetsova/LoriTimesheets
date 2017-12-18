@@ -3,10 +3,16 @@
     <dimen name="activity_horizontal_margin"> 10dp</dimen>
     <dimen name="logo_width_height">144dp</dimen>
 
+    <dimen name="text_size_16">16sp</dimen>
     <dimen name="text_size_18">18sp</dimen>
     <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
 
     <dimen name="margin_10_dp">10dp</dimen>
     <dimen name="margin_20_dp">20dp</dimen>
     <dimen name="margin_30_dp">30dp</dimen>
+
+    <dimen name="padding_3_dp">3dp</dimen>
+    <dimen name="padding_5_dp">5dp</dimen>
+    <dimen name="padding_10_dp">10dp</dimen>
 </resources>
