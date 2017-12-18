@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10_dp"
+            android:text="@string/search_title"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10_dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20_dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_view_style"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawablePadding="@dimen/padding_3_dp"
+                android:onClick="onClickStartDate"
+                android:padding="@dimen/padding_3_dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_18" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10_dp"
+                android:layout_marginRight="@dimen/margin_10_dp"
+                android:layout_weight="0"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_24" />
+
+            <TextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20_dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_view_style"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawablePadding="@dimen/padding_3_dp"
+                android:onClick="onClickEndDate"
+                android:padding="@dimen/padding_3_dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_18" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etSearchText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20_dp"
+            android:layout_marginLeft="@dimen/margin_20_dp"
+            android:layout_marginRight="@dimen/margin_20_dp"
+            android:layout_marginTop="@dimen/margin_20_dp"
+            android:background="@drawable/text_view_style"
+            android:drawableLeft="@drawable/ic_search_black"
+            android:drawablePadding="@dimen/margin_10_dp"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_18" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_20_dp"
+            android:layout_marginLeft="@dimen/margin_20_dp"
+            android:layout_marginRight="@dimen/margin_20_dp"
+            android:onClick="onClickSearch"
+            android:text="@string/find" />
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lvTimeEntry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
