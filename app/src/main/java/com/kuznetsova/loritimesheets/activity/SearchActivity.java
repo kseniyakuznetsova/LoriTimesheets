@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +20,7 @@ import com.google.gson.JsonObject;
 import com.kuznetsova.loritimesheets.API.APIFactory;
 import com.kuznetsova.loritimesheets.API.APIService;
 import com.kuznetsova.loritimesheets.R;
-import com.kuznetsova.loritimesheets.adapter.TimeEntryAdapter;
+import com.kuznetsova.loritimesheets.adapter.TimeEntryInSearchAdapter;
 import com.kuznetsova.loritimesheets.entities.TimeEntry;
 import com.kuznetsova.loritimesheets.entities.User;
 
@@ -45,7 +46,7 @@ public class SearchActivity extends AppCompatActivity {
     private EditText etSearchText;
     private ListView lvTimeEntry;
     private ProgressDialog progressDialog;
-    private TimeEntryAdapter timeEntryAdapter;
+    private TimeEntryInSearchAdapter timeEntryAdapter;
 
     private SimpleDateFormat sdfDate;
     private SimpleDateFormat sdfDateReverse;
@@ -72,11 +73,13 @@ public class SearchActivity extends AppCompatActivity {
         tvStartDate=(TextView) findViewById(R.id.tvStartDate);
         tvEndDate=(TextView) findViewById(R.id.tvEndDate);
         etSearchText=(EditText) findViewById(R.id.etSearchText);
-        //tvNoInformation=(TextView) findViewById(R.id.tvNoInformation);
+        tvNoInformation=(TextView) findViewById(R.id.tvNoInformation);
         lvTimeEntry = (ListView) findViewById(R.id.lvTimeEntry);
 
-        timeEntryAdapter = new TimeEntryAdapter(getApplicationContext(), timeEntryList);
+
+        timeEntryAdapter = new TimeEntryInSearchAdapter(getApplicationContext(), timeEntryList);
         lvTimeEntry.setAdapter(timeEntryAdapter);
+        lvTimeEntry.setEmptyView(tvNoInformation);
 
         sdfDate =  new SimpleDateFormat("dd.MM.yyyy");
         sdfDateReverse=new SimpleDateFormat("yyyy-MM-dd");
@@ -130,7 +133,7 @@ public class SearchActivity extends AppCompatActivity {
                             }
                             //else
                                // tvNoInformation.setVisibility(View.INVISIBLE);
-                            timeEntryAdapter = new TimeEntryAdapter(getApplicationContext(), timeEntryList);
+                            timeEntryAdapter = new TimeEntryInSearchAdapter(getApplicationContext(), timeEntryList);
                             lvTimeEntry.setAdapter(timeEntryAdapter);
                         }
                     }

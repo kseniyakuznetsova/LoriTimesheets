@@ -93,8 +93,21 @@
             android:text="@string/find" />
 
     </LinearLayout>
+
     <ListView
         android:id="@+id/lvTimeEntry"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvNoInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_16"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_30_dp"
+        android:text="@string/information_not_available"/>
 </LinearLayout>

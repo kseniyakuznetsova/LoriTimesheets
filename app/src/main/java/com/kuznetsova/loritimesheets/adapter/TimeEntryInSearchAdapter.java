@@ -17,14 +17,14 @@ import java.util.List;
 
 import com.kuznetsova.loritimesheets.R;
 
-public class TimeEntryAdapter extends BaseAdapter {
+public class TimeEntryInSearchAdapter extends BaseAdapter {
     private Context context;
     private List<TimeEntry> timeEntryList;
     private LayoutInflater inflater;
 
     //private Calendar calendar;
 
-    public TimeEntryAdapter(Context context, List<TimeEntry> timeEntryList) {
+    public TimeEntryInSearchAdapter(Context context, List<TimeEntry> timeEntryList) {
         this.context = context;
         this.timeEntryList = timeEntryList;
         inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
