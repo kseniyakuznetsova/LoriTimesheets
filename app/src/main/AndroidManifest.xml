@@ -22,8 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.AuthActivity" />
-        <activity android:name=".activity.WeekTimeEntryActivity" />
-        <activity android:name=".activity.SearchActivity"
+        <activity android:name=".activity.WeekTimeEntryActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activity.SearchActivity">
             android:parentActivityName=".activity.WeekTimeEntryActivity">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -31,6 +32,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.WeekTimeEntryActivity" />
         </activity>
-    </application>
+        <activity
+            android:name=".activity.InsertTimeEntryActivity"
+            android:parentActivityName=".activity.WeekTimeEntryActivity">
 
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.WeekTimeEntryActivity" />
+        </activity>
+
+
+        <service android:name=".database.DatabaseService" />
+    </application>
 </manifest>

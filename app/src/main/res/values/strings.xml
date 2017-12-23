@@ -2,6 +2,7 @@
     <string name="app_name">Lori Timesheets</string>
 
     <!--Вход в систему-->
+    <string name="sign_in_title">Вход в систему</string>
     <string name="sign_in">Войти</string>
     <string name="login">Логин</string>
     <string name="password">Пароль</string>
@@ -19,7 +20,21 @@
     <string name="hour_title">ч</string>
     <string name="minutes_title">мин</string>
     <string name="save">Сохранить</string>
-    <string name="not_check">Не выбрано</string>
+    <string name="not_check">Не выбрано</string>\
+    <string name="create_title">Создание</string>
+    <string name="update_title">Редактирование</string>
+    <string name="choose_hours">Часы:</string>
+    <string name="choose_minutes">Минуты:</string>
+    <string name="insert_time_entry_title">Добавление новой записи</string>
+    <string name="update_time_entry_title">Изменение записи</string>
+    <string name="error_duration">Неверно задана продолжительность</string>
+    <string name="error_project_not_chosen">Не выбран проект</string>
+    <string name="error_task_not_chosen">Не выбрана задача</string>
+    <string name="getting_data">Загрузка данных…</string>
+    <string name="saving_data">Сохранение информации…</string>
+    <string name="number_picker_formatter">%02d</string>
+    <!--Font-->
+    <string name="roboto_light">sans-serif-light</string>
 
     <string name="title_choose_project">Выберите проект</string>
     <string name="title_choose_task">Выберите задачу</string>
@@ -28,6 +43,11 @@
 
     <!--Список time entry-->
     <string name="sign_out">Выйти</string>
+    <string name="current_week">Выбранная неделя</string>
+    <string-array name="context_menu_action">
+        <item>Редактировать</item>
+        <item>Удалить</item>
+    </string-array>
 
     <!--Поиск-->
     <string name="search_title">Поиск</string>
@@ -38,4 +58,6 @@
     <string name="empty_field">Отсутствует</string>
     <string name="information_not_available">Информация отсутствует</string>
     <string name="find_information">Выполняется поиск…</string>
+
+
 </resources>

@@ -1,13 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kuznetsova.loritimesheets.activity.WeekTimeEntryActivity">
+    tools:context="com.kuznetsova.loritimesheets.activity.WeekTimeEntryActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_20_dp">
 
-    <TextView
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10_dp"
+            android:text="@string/current_week"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_20"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10_dp"
+            android:orientation="horizontal"
+            android:onClick="onCalendarClick"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/ivChooseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/ic_calendar_white"
+                android:clickable="true"/>
+
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_3_dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_18"
+                android:layout_gravity="end"
+                android:textAlignment="textEnd"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10_dp"
+                android:layout_marginRight="@dimen/margin_10_dp"
+                android:layout_weight="0"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_24" />
+
+            <TextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20_dp"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_3_dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_18"
+                android:layout_gravity="start"
+                android:textAlignment="textStart"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10_dp"
+            android:orientation="horizontal"
+            android:onClick="onCalendarClick"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/ivSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/ic_sum_time"
+                android:clickable="true"/>
+
+            <TextView
+                android:id="@+id/tvSumTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_3_dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_18"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/weekPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello world"/>
-</android.support.constraint.ConstraintLayout>
+        android:layout_weight="1"/>
+
+</LinearLayout>

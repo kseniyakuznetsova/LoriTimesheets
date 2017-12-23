@@ -1,11 +1,11 @@
 package com.kuznetsova.loritimesheets.API;
 
 import com.google.gson.JsonObject;
-import com.kuznetsova.loritimesheets.entities.ProjectParticipant;
-import com.kuznetsova.loritimesheets.entities.Task;
-import com.kuznetsova.loritimesheets.entities.TimeEntry;
-import com.kuznetsova.loritimesheets.entities.User;
+import com.kuznetsova.loritimesheets.entity.ProjectParticipant;
+import com.kuznetsova.loritimesheets.entity.Task;
+import com.kuznetsova.loritimesheets.entity.TimeEntry;
 import com.kuznetsova.loritimesheets.entity.Token;
+import com.kuznetsova.loritimesheets.entity.User;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public interface APIService {
     Call<List<ProjectParticipant>> getProjectList(@Body JsonObject body, @Header("Authorization") String token);
 
     @POST("/app/rest/v2/entities/ts$Task/search")
-    Call<List<Task>> getTaskList(@Body JsonObject body, @Header("Authorization") String token);
+    Call<List<Task>> getTaskList(@Body JsonObject body,@Header("Authorization") String token);
 
     @POST("/app/rest/v2/entities/ts$TimeEntry")
     Call<TimeEntry> createTimeEntry(@Body TimeEntry timeEntry, @Header("Authorization") String token);
@@ -45,6 +45,9 @@ public interface APIService {
 
     @DELETE("/app/rest/v2/entities/ts$TimeEntry/{id}")
     Call<Void> deleteTimeEntry(@Path("id") String id, @Header("Authorization") String token);
+
+    @POST("/app/rest/v2/queries/ts$TimeEntry/getTimeEntryOfDay?view=timeEntry-full")
+    Call<List<TimeEntry>> getTimeEntryOfDay(@Body JsonObject body, @Header("Authorization") String token);
 
     @POST("/app/rest/v2/queries/ts$TimeEntry/findTimeEntry?view=timeEntry-full")
     Call<List<TimeEntry>> findTimeEntry(@Body JsonObject body, @Header("Authorization") String token);

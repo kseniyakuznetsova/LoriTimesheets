@@ -1,9 +1,18 @@
-package com.kuznetsova.loritimesheets.entities;
+package com.kuznetsova.loritimesheets.entity;
 
-public class Task {
+import java.io.Serializable;
+
+public class Task implements Serializable{
     private String id;
     private String name;
     private Project project;
+
+    public Task() {
+    }
+
+    public Task(String id) {
+        this.id = id;
+    }
 
     public Task(String id, String name, Project project) {
         this.id = id;

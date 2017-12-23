@@ -1,11 +1,12 @@
-package com.kuznetsova.loritimesheets.entities;
+package com.kuznetsova.loritimesheets.entity;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 
-public class Project {
-    @SerializedName("id")
+
+public class Project implements Serializable{
     @Expose
     private String id;
     @SerializedName("name")
@@ -19,6 +20,9 @@ public class Project {
     public Project(String id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Project() {
     }
 
     public String getId() {

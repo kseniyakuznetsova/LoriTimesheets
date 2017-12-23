@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fragmentMonday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/padding_5_dp"/>
+
+            <FrameLayout
+                android:id="@+id/fragmentTuesday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/padding_5_dp"/>
+
+            <FrameLayout
+                android:id="@+id/fragmentWednesday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/padding_5_dp"/>
+
+            <FrameLayout
+                android:id="@+id/fragmentThursday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/padding_5_dp"/>
+
+            <FrameLayout
+                android:id="@+id/fragmentFriday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/padding_5_dp"/>
+
+            <FrameLayout
+                android:id="@+id/fragmentSaturday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/padding_5_dp"/>
+
+            <FrameLayout
+                android:id="@+id/fragmentSunday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/padding_5_dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

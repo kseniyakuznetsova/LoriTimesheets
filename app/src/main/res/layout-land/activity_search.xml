@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_10_dp"
+            android:layout_marginTop="@dimen/padding_5_dp"
             android:text="@string/search_title"
             android:textAlignment="center"
             android:textColor="@android:color/white"
@@ -23,7 +23,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_10_dp"
+            android:layout_marginTop="@dimen/padding_5_dp"
             android:orientation="horizontal">
 
             <TextView
@@ -68,30 +68,37 @@
 
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/etSearchText"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_20_dp"
-            android:layout_marginLeft="@dimen/margin_20_dp"
-            android:layout_marginRight="@dimen/margin_20_dp"
-            android:layout_marginTop="@dimen/margin_20_dp"
-            android:background="@drawable/text_view_style"
-            android:drawableLeft="@drawable/ic_search_black"
-            android:drawablePadding="@dimen/margin_10_dp"
-            android:maxLines="1"
-            android:textSize="@dimen/text_size_18" />
+            android:layout_marginTop="@dimen/padding_5_dp"
+            android:layout_marginBottom="@dimen/padding_5_dp"
+            android:orientation="horizontal">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="@dimen/margin_20_dp"
-            android:layout_marginLeft="@dimen/margin_20_dp"
-            android:layout_marginRight="@dimen/margin_20_dp"
-            android:onClick="onClickSearch"
-            android:text="@string/find" />
+            <EditText
+                android:id="@+id/etSearchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20_dp"
+                android:layout_marginRight="@dimen/margin_10_dp"
+                android:background="@drawable/text_view_style"
+                android:drawableLeft="@drawable/ic_search_black"
+                android:drawablePadding="@dimen/margin_10_dp"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_18" />
 
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20_dp"
+                android:layout_marginRight="@dimen/margin_20_dp"
+                android:layout_weight="0"
+                android:onClick="onClickSearch"
+                android:text="@string/find" />
+
+        </LinearLayout>
     </LinearLayout>
 
     <RelativeLayout
@@ -113,5 +120,4 @@
             android:visibility="gone"
             android:text="@string/information_not_available"/>
     </RelativeLayout>
-
 </LinearLayout>

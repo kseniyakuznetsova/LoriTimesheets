@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".activity.InsertTimeEntryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_20_dp">
+
+            <TextView
+                android:id="@+id/tvAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10_dp"
+                android:focusableInTouchMode="true"
+                android:text="@string/create_title"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_24" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20_dp"
+                android:layout_marginRight="@dimen/margin_20_dp"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_project"
+                    android:drawablePadding="@dimen/padding_3_dp"
+                    android:text="@string/project_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_20" />
+
+
+                <TextView
+                    android:id="@+id/tvProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20_dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_view_style"
+                    android:onClick="onClickChooseProject"
+                    android:padding="@dimen/padding_3_dp"
+                    android:text="@string/not_check"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_18" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20_dp"
+                android:layout_marginRight="@dimen/margin_20_dp"
+                android:layout_marginTop="@dimen/margin_10_dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_task"
+                    android:drawablePadding="@dimen/padding_3_dp"
+                    android:text="@string/task_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_20" />
+
+
+                <TextView
+                    android:id="@+id/tvTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20_dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_view_style"
+                    android:enabled="false"
+                    android:onClick="onClickChooseTask"
+                    android:padding="@dimen/padding_3_dp"
+                    android:text="@string/not_check"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_18" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10_dp"
+                android:drawableLeft="@drawable/ic_clock"
+                android:drawablePadding="@dimen/padding_3_dp"
+                android:text="@string/duration_title"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10_dp"
+                android:layout_marginLeft="@dimen/margin_10_dp"
+                android:layout_marginTop="@dimen/padding_5_dp"
+                android:text="@string/choose_hours"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_18" />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/npDurationHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:np_dividerColor="@color/colorPrimary"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_height="64dp"
+                app:np_max="12"
+                app:np_min="0"
+                app:np_orientation="horizontal"
+                app:np_selectedTextColor="@color/colorPrimary"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/colorPrimary"
+                app:np_textSize="@dimen/text_size_24"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="01"
+                app:np_wheelItemCount="5"
+                app:np_wrapSelectorWheel="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10_dp"
+                android:layout_marginLeft="@dimen/margin_10_dp"
+                android:layout_marginTop="@dimen/margin_10_dp"
+                android:text="@string/choose_minutes"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_18" />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/npDurationMinutes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:np_dividerColor="@color/colorPrimary"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_height="64dp"
+                app:np_max="59"
+                app:np_min="0"
+                app:np_orientation="horizontal"
+                app:np_selectedTextColor="@color/colorPrimary"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/colorPrimary"
+                app:np_textSize="@dimen/text_size_24"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="00"
+                app:np_wheelItemCount="5"
+                app:np_wrapSelectorWheel="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10_dp"
+                android:drawableLeft="@drawable/ic_description"
+                android:drawablePadding="@dimen/padding_3_dp"
+                android:text="@string/description_title"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10_dp"
+                android:layout_marginRight="@dimen/margin_10_dp"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

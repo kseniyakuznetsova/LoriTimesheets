@@ -1,9 +1,10 @@
-package com.kuznetsova.loritimesheets.entities;
+package com.kuznetsova.loritimesheets.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class TimeEntry {
+public class TimeEntry implements Serializable{
     private String id;
     private User user;
     private String date;
@@ -13,6 +14,7 @@ public class TimeEntry {
     private String description;
 
     public TimeEntry(User user, String date, Task task, int minutes, int hours, String description) {
+        this.id = id;
         this.user = user;
         this.date = date;
         this.task = task;
@@ -21,13 +23,13 @@ public class TimeEntry {
         this.description = description;
     }
 
-    public TimeEntry(String id, User user, String date, Task task, int timeInMinutes, double timeInHours, String description) {
+    public TimeEntry(String id, User user, String date, Task task,int minutes, int hours, String description) {
         this.id = id;
         this.user = user;
         this.date = date;
         this.task = task;
-        this.timeInMinutes = timeInMinutes;
-        this.timeInHours = timeInHours;
+        this.timeInMinutes = minutes+hours*60;
+        this.timeInHours = new BigDecimal(hours+ minutes/60.0).setScale(2, RoundingMode.UP).doubleValue();
         this.description = description;
     }
 

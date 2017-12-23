@@ -7,12 +7,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.kuznetsova.loritimesheets.entities.TimeEntry;
+import com.kuznetsova.loritimesheets.entity.TimeEntry;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import com.kuznetsova.loritimesheets.R;
@@ -22,13 +21,10 @@ public class TimeEntryInSearchAdapter extends BaseAdapter {
     private List<TimeEntry> timeEntryList;
     private LayoutInflater inflater;
 
-    //private Calendar calendar;
-
     public TimeEntryInSearchAdapter(Context context, List<TimeEntry> timeEntryList) {
         this.context = context;
         this.timeEntryList = timeEntryList;
         inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        //calendar = Calendar.getInstance();
     }
     @Override
     public int getCount() {
@@ -61,7 +57,7 @@ public class TimeEntryInSearchAdapter extends BaseAdapter {
             ((TextView) convertView.findViewById(R.id.tvYear)).setText(Integer.toString(calendar.get(Calendar.YEAR)));
             int hours=(int)timeEntry.getTimeInHours();
             int minutes=timeEntry.getTimeInMinutes()-hours*60;
-            ((TextView) convertView.findViewById(R.id.tvDuration)).setText(hours+" ч "+minutes+" мин");
+            ((TextView) convertView.findViewById(R.id.tvDuration)).setText(String.format("%02d", hours) + " ч " +String.format("%02d", minutes) +" мин");
             ((TextView) convertView.findViewById(R.id.tvProject)).setText("("+timeEntry.getTask().getProject().getName()+")");
             ((TextView) convertView.findViewById(R.id.tvTask)).setText(timeEntry.getTask().getName());
             String description=timeEntry.getDescription();
@@ -71,14 +67,6 @@ public class TimeEntryInSearchAdapter extends BaseAdapter {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
-        /*SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-        Date startDate = new Date(record.getTimeStart());
-        String strStartDate = sdf.format(startDate);
-
-        Date duration = new Date(record.getDuration());
-        String strDuration = sdf.format(duration);*/
-
         return convertView;
     }
 

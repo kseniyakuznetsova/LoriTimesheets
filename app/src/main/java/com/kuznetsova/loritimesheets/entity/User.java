@@ -1,4 +1,4 @@
-package com.kuznetsova.loritimesheets.entities;
+package com.kuznetsova.loritimesheets.entity;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -14,8 +14,9 @@ public class User implements Serializable {
     @Expose
     private String login;
 
-    public User(String login) {
-        this.login = login;
+
+    public User(String id) {
+        this.id = id;
     }
 
     public User(String id, String login) {
