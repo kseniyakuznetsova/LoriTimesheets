@@ -98,8 +98,9 @@ public class AuthActivity extends AppCompatActivity {
                         Toast.makeText(AuthActivity.this, getString(R.string.network_failed), Toast.LENGTH_SHORT).show();
                     }
                 });
-            } else
+            } else {
                 Toast.makeText(AuthActivity.this, getString(R.string.network_failed), Toast.LENGTH_SHORT).show();
+            }
         }
 
     }

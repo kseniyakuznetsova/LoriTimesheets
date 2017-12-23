@@ -68,13 +68,11 @@ public class SplashScreenActivity extends AppCompatActivity {
                 });
             }
             else {
-                Toast.makeText(this, R.string.network_failed, Toast.LENGTH_SHORT).show();
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        finish();
-                    }
-                }, 3000);
+                user = new User(getSharedPreferences(USER_PREFERENCE, Context.MODE_PRIVATE).getString(USER_ID, null));
+                Intent intent = new Intent(SplashScreenActivity.this, WeekTimeEntryActivity.class);
+                intent.putExtra("user",(Serializable)user);
+                startActivity(intent);
+                finish();
             }
 
         }
